@@ -96,7 +96,7 @@ with st.sidebar:
     st.header("Paramètres Globaux")
     methode = st.selectbox("Méthode de Scraping", ["BeautifulSoup", "Selenium", "WebScraping"])
     nb_pages = st.number_input("Nombre de pages (0 à 100)", min_value=0, max_value=100, value=1)
-    lancer = st.button("Lancer le scraping global")
+    lancer_btn = st.button("Lancer le scraping global")
     
     st.divider()
     
@@ -108,7 +108,7 @@ with st.sidebar:
     # Nouveau bouton pour afficher la section évaluation
     evaluation_btn = st.button("Formulaire d'évaluation")
 
-if lancer:
+if lancer_btn:
     if nb_pages == 0:
         st.warning("Veuillez choisir un nombre de pages supérieur à 0.")
     else:
